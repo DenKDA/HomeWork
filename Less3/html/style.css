@@ -40,6 +40,7 @@
     display: inline-block;
     width: 400px;
     margin: 0 0 135px 0;
+    box-sizing: border-box;
 
 
 }
@@ -47,5 +48,15 @@
 
 .article-title {
     margin: 0 0 38px 0;
+
+}
+
+.button {
+    padding: 37px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid gray;
+    
 
 }
