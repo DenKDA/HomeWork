@@ -102,9 +102,9 @@ button {
     font-size: 20px;
     
 }
-button: hover {
+button:hover {
     background-color:rgb(3, 169, 244);
-    transform: scale(1.2);
+    
 }
 .article-paragraph {
     margin: 0 0 30px 0;
@@ -114,5 +114,5 @@ img {
     display: inline-block;
     width: 420px;
     margin: 0 0 0 0;
-    box-sizing: border-box;
+    
 }
