@@ -37,10 +37,15 @@
     text-align: center;
     display: block;
     margin: 0 auto;
+    
 
+}
+.list-item a:hover {
+    color:rgb(3, 169, 244);
 }
 
 .nav-link {
+    display: block;
     text-decoration: none;
     color: gray;
 
@@ -55,15 +60,17 @@
     display: inline-block;
     width: 420px;
     box-sizing: border-box;
+    margin: 0 0 135px 0;
     
-
-
 }
 .article-item-r {
    /* margin-right: calc(900 - 400 * 2 - 8px)*/
 margin-right: 60px;
-
 }
+.article-item-r-d {
+    margin-bottom: 0;
+}
+
 .article-list {
 font-size: 0;
 margin-bottom: 55px;
@@ -75,6 +82,7 @@ margin-bottom: 55px;
 }
 
 .article-title {
+    font-size: 30px;
     color: grey;
     margin: 0 0 38px 0;
 }
@@ -88,10 +96,15 @@ button {
     margin: 0 auto;
     outline: none;
     cursor: pointer;
-    background-color: transparent;
-    border: 1px solid gray;
+    background-color:transparent;
+    border: 1px solid rgb(122, 122, 122);
     color: grey;
     font-size: 20px;
+    
+}
+button: hover {
+    background-color:rgb(3, 169, 244);
+    transform: scale(1.2);
 }
 .article-paragraph {
     margin: 0 0 30px 0;
