@@ -8,19 +8,18 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
+.wrapper {
+    
+}
 .header {
-    padding: 45px 0 0 0;
+    
     width: 1110px;
     margin: 0 auto;
 
 }
 
 img {
-    list-style: none;
-    max-width: 100%;
-    margin: 0 auto; 
-    vertical-align: bottom;
+    
 }
 .logo_link {
     text-decoration: none;
@@ -30,7 +29,7 @@ img {
 .list-item__logo { 
     color: #555252;
     float: left;
-    font-size: 16px;
+    font-size: 21px;
     margin: 0;
     text-transform: uppercase;
     
@@ -99,7 +98,8 @@ img {
     height: 40px;
     width: 200px;
     padding-left: 15px;
-    padding-top: 12px;   
+    padding-top: 12px;
+    
 }
 .product-price {
     float: right;
