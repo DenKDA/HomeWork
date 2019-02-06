@@ -1,3 +1,4 @@
+@import "../css/vars.css";
 
 * {
     margin: 0;
@@ -5,36 +6,28 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--main-font);
 }
-
-
-.header {  
+.container {
     width: 1110px;
     margin: 0 auto;
 }
 
-img {
-    
-}
+
 .logo_link {
     text-decoration: none;
-    color: #555252;
+    color: var(--font-color);
 }
 
 .list-item__logo { 
     color: #555252;
     float: left;
-    font-size: 21px;
+    font-size: 30px;
     margin: 0;
     text-transform: uppercase;
     margin-top: 38px;  
 }
-.list-item__logo:hover {
-    color: #1abc9c;
-}
-
-    
+  
 .list-item__logo::first-letter {
     color: #1abc9c;
 }
@@ -54,7 +47,8 @@ img {
 .nav-link {
     text-decoration: none;
     color: #555252;
-    font-size: 11px;
+    font-size: 14px;
+    list-style: none;
 }
 
 .nav-link:hover {
@@ -74,6 +68,91 @@ img {
     float: right;
 }
 
+.card {
+    float: left;
+}
+
+/*.card-img__cont {
+    margin-right: 30px;
+}*/
+.card-img__cont:nth-child(-n + 3) {
+    margin-right: 30px;
+}
+/*.last {
+    margin: 0;
+}*/
+.card-list {
+    padding-top: 82px;
+}
+.card-list__item {
+    text-decoration: none;
+    list-style: none;
+    background-color: #e9f0fd;
+
+}
+.card-menu__list {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.banner {
+    background-color: rgb(0, 0, 2);
+    width: 1600px;
+    height: 600px;
+}
+
+.collection-section-wrapper {
+    background-color: #e9f0fd;
+    padding-bottom: 30px;
+}
+.colection-section__title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #515151;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.colection-section__title::after {
+    content: "";
+    border-bottom: 8px solid #1abc9c;
+    display: block;
+    width: 164px;
+    margin: 0 auto;
+    margin-top: 32px;
+    
+} 
+.h2 {
+    list-style: none;
+    text-decoration: none;
+}
+.a {
+    list-style: none;
+    text-decoration: none;
+}
+.card-link {
+    list-style: none;
+    text-decoration: none;
+
+}
+.card-price {
+    float: right;
+    padding-right: 30px;
+}
+
+
+.footer-wrapper {
+    background-color: #323232;
+    
+    
+}
+.footer-container {
+    font-size: 16px;
+    text-align: center;
+    color: rgb(254, 254, 254);
+    padding: 37px 0; 
+    
+}
 
  
 
