@@ -219,12 +219,12 @@ img {
 .article-link:hover {
     background-color:#1abc9c;
 }
-.products-item:hover .product-name {
+/*.products-item:hover .product-name {
     background-color: #1abc9c;
 }
 .products-item:hover .product-price {
     background-color: #7fd9c7;
-}
+}*/
 a:hover .product-name {
     background-color: #1abc9c;
 }
