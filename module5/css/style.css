@@ -1,9 +1,13 @@
 @import "../css/vars.css";
 
 * {
+    
+    box-sizing: border-box;
+}
+*,*::before, *::after {
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -71,7 +75,8 @@ body {
 
 
 .card-list {
-    padding-top: 82px;
+    /*padding-top: 82px;*/
+    padding-bottom: 100px;
 }
 .card-list__item {
     float: left;
@@ -99,10 +104,12 @@ img {
 
 .banner {
     position: relative; 
+    
 }
+
 .banner::after {
     content: "";
-    display: block;
+    display: inline-block;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -111,26 +118,42 @@ img {
     background-color: rgba(0, 0, 0, 0.52);/*затемнение баннера*/
 }
 .left-button_banner {
-    background-image: url(../img/icons/left_arrow_icon.png);
+    background-image: url(../img/icons/left\ arrow.png);
     left: 0;
 }
 .right-button_banner {
-    background-image: url(../img/icons/arrow_right_icon.png);
+    background-image: url(../img/icons/right\ arrow.png);
     right: 0;
+    
 }
+.button-cont {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .button-banner {
     display: block;
     width: 100px;
     height: 105px;
     position: absolute;
-    /*color: rgb(255, 255, 255);*/
     top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(26, 188, 156, 0.65);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    
+}
+:hover.button-banner{
     background-color: rgb(26, 188, 156);
-    transform: translateX(360%) translateY(-50%);
 }
 
-
 .banner-text {
+    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -138,17 +161,34 @@ img {
     transform: translate(-50%, -50%);
 }
 
+.banner-title {
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 35px;
+}
+.banner-info {
+    font-weight: 300;
+    font-size: 24px;
+}
+.banner-title, .banner-info {
+    font-family: var(--main-font) ;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+}
 .collection-section-wrapper {
     background-color: #e9f0fd;
     padding-bottom: 30px;
     
 }
 .colection-section__title {
+    font-size: 48px;
     text-transform: uppercase;
     text-align: center;
     color: #515151;
     margin: 0 auto;
     padding-top: 100px;
+    margin-bottom: 85px;
 }
 .colection-section__title::after {
     content: "";
@@ -159,38 +199,75 @@ img {
     margin-top: 32px;
     
 } 
-.h2 {
-    list-style: none;
-    text-decoration: none;
-}
-.a {
-    list-style: none;
-    text-decoration: none;
-}
-.card-link {
-    /*list-style: none;*/
+
+
+.card-link_name {
+    color: rgb(254, 254, 254);
     text-decoration: none;
 
 }
 .card-name {
-    color: #ffffff;
+    line-height: 40px;
     background-color: #323232;
-    text-decoration: none;
-    list-style: none;
+    padding-left: 10px;
     text-transform: uppercase;
     font-size: 18px;
 }
+.card-link_price {
+    color: rgb(254, 254, 254);
+    text-decoration: none;
+}
 .card-price {
     float: right;
-    /*padding-right: 30px;*/
     color: #ffffff;
     background-color: #8c8c8c;
     font-size: 18px;
     text-transform: uppercase;
-    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    width: 55px;
 }
+.card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.product-button {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: 1px solid var(--ctrl-color);
+    cursor: pointer;
+}
+.button-like_heart {
+background-image: url(../img/icons/heart-like.png);
+}
+.button-change_arrows {
+background-image: url(../img/icons/change-arrows.png);
+}
+.button-clock {
+background-image: url(../img/icons/clock.png);
+}
+.button-magazine_truck {
+background-image: url(../img/icons/magazine_truck.png);
+}
+/* Модалька*/
+.card-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #737373;
+    text-align: center;
 
-
+}
+.card-list_item:hover.card-overlay {
+    display: block;
+}
+/*Конец модальки*/
 .footer-wrapper {
     background-color: #323232;
     
@@ -204,6 +281,24 @@ img {
     
 }
 
+ /* из ФШ 
  
+ .NEW_COLLECTION {
+  font-size: 48px;
+  font-family: "Roboto";
+  color: rgb(81, 81, 81);
+  text-transform: uppercase;
+  line-height: 0.667;
+  text-align: center;
+  position: absolute;
+  left: 2.08px;
+  top: 816.938px;
+  width: 384px;
+  height: 34px;
+  z-index: 67;
+}
+
+ 
+ */
 
 
