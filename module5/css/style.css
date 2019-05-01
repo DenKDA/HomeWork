@@ -1,15 +1,14 @@
 @import "../css/vars.css";
 
 * {
-    
-    box-sizing: border-box;
-}
-*,*::before, *::after {
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+.a {
+    text-decoration: none;
+}
 body {
     font-family: var(--main-font);
 }
@@ -22,6 +21,7 @@ body {
 .logo_link {
     text-decoration: none;
     color: var(--font-color);
+    
 }
 
 .list-item__logo { 
@@ -30,7 +30,7 @@ body {
     font-size: 30px;
     margin: 0;
     text-transform: uppercase;
-    margin-top: 38px;  
+    
 }
   
 .list-item__logo::first-letter {
@@ -39,7 +39,7 @@ body {
 .header-nav {
     padding-top: 43px;
     padding-bottom: 38px;
-
+    display: block;
 }
 
 .list-item {
@@ -74,25 +74,11 @@ body {
 }
 
 
-.card-list {
-    /*padding-top: 82px;*/
+.products {
+    padding-top: 82px;
     padding-bottom: 100px;
 }
-.card-list__item {
-    float: left;
-    text-decoration: none;
-    list-style: none;
-    background-color: #e9f0fd;
-    margin-right: 30px;
 
-}
-.card-list__item:last-child {
-    margin: 0;
-}
-.card-menu__list {
-    text-decoration: none;
-    list-style: none;
-}
 img {
     border-style: none;
 }
@@ -156,15 +142,16 @@ img {
     z-index: 1;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left:47%;
     color: #ffffff;
-    transform: translate(-50%, -50%);
+    transform: translate(-44%, -50%);
 }
 
 .banner-title {
     font-weight: 900;
     font-size: 60px;
     margin-bottom: 35px;
+    text-align: left;
 }
 .banner-info {
     font-weight: 300;
@@ -176,98 +163,191 @@ img {
     color: #ffffff;
     text-align: left;
 }
-.collection-section-wrapper {
-    background-color: #e9f0fd;
-    padding-bottom: 30px;
+
+/* Карточки*/
+
+.products-list {  
+    height: auto;
+    overflow: hidden;
+     
+}
+
+.products-item {
+    
+    width: 255px;
+    height: 100%;
+    list-style: none;
+    float: left;
+    margin-right: 30px;
+    position: relative;
     
 }
-.colection-section__title {
-    font-size: 48px;
+.card-name_price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+.product-name {
+    float: left;
+    background-color: #323232;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: left;
+    height: 40px;
+    width: 200px;
+    padding-left: 15px;
+    padding-top: 9px;  
+    
+}
+.product-price {
+    float: right;
+    background-color: #8c8c8c;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 auto;
+   text-align: right;
+    height: 40px;
+    width: 55px;
+    padding-right: 12px;
+    padding-top: 9px;
+    
+    
+}
+
+
+.products-item:nth-child(n + 5) {
+    padding-bottom: 105px;
+}
+.products-item:nth-child(-n + 4) {
+    margin-bottom: 30px;
+}
+
+.products-item:nth-child(4n) {
+    margin-right: 0;
+
+}
+.products {
     text-transform: uppercase;
     text-align: center;
-    color: #515151;
-    margin: 0 auto;
-    padding-top: 100px;
-    margin-bottom: 85px;
+    color: #555252;
 }
-.colection-section__title::after {
+.wrapper-products {
+    width: 1110px;
+    margin: 0 auto;
+}
+.section-products::after {
     content: "";
     border-bottom: 8px solid #1abc9c;
     display: block;
-    width: 164px;
+    width: 160px;
     margin: 0 auto;
-    margin-top: 32px;
-    
-} 
+    margin-top: 20px;
+}
+.section-products {
+    margin: 0 0 90px 0;
+    font-size: 35px;
+}
 
+.products-item:hover .product-name {
+    background-color: #1abc9c;
+}
+.products-item:hover .product-price {
+    background-color: #7fd9c7;
+}
 
-.card-link_name {
-    color: rgb(254, 254, 254);
-    text-decoration: none;
-
-}
-.card-name {
-    line-height: 40px;
-    background-color: #323232;
-    padding-left: 10px;
-    text-transform: uppercase;
-    font-size: 18px;
-}
-.card-link_price {
-    color: rgb(254, 254, 254);
-    text-decoration: none;
-}
-.card-price {
-    float: right;
-    color: #ffffff;
-    background-color: #8c8c8c;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 900;
-    width: 55px;
-}
 .card-img {
     display: block;
     width: 100%;
     height: auto;
+    
 }
-.product-button {
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    border: 1px solid var(--ctrl-color);
-    cursor: pointer;
-}
-.button-like_heart {
-background-image: url(../img/icons/heart-like.png);
-}
-.button-change_arrows {
-background-image: url(../img/icons/change-arrows.png);
-}
-.button-clock {
-background-image: url(../img/icons/clock.png);
-}
-.button-magazine_truck {
-background-image: url(../img/icons/magazine_truck.png);
-}
-/* Модалька*/
+
+
+
 .card-overlay {
     display: none;
+    height: 282px;
+    width: 100%;
+    border: 10px solid rgba(255, 255, 255, .549);
+    background-color: rgba(0, 0, 0, .549);
+    
+    justify-content: center;
+    align-items: center;
+    background-clip: padding-box;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #737373;
-    text-align: center;
 
 }
-.card-list_item:hover.card-overlay {
-    display: block;
+.products-item:hover .card-overlay {
+    display: flex;
 }
-/*Конец модальки*/
+.product-button {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  float: left;
+  margin-right: 8px;
+  
+}
+
+.product-button:nth-child(-n+3) {
+  margin-bottom: 8px;
+}
+.product-button:hover {
+ background-color: #1abc9c;
+} 
+.button-magazine_truck:hover {
+  background-color: #323232;
+}
+
+.button-like_heart {
+background-image: url(../img/icons/heart-like.png);
+width: 48px;
+height: 48px;
+
+}
+.button-change_arrows {
+background-image: url(../img/icons/change-arrows.png);
+width: 48px;
+height: 48px;
+}
+.button-clock {
+background-image: url(../img/icons/clock.png);
+width: 48px;
+height: 48px;
+margin: 0;
+}
+.button-magazine_truck {
+background-image: url(../img/icons/magazine_truck.png);
+width: 164px;
+height: 48px;
+margin: 0;
+float: left;
+text-transform: uppercase;
+color: #ffffff;
+background-position: 10px center;
+position: relative;
+}
+.add-to_card {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.card-menu_list {
+  text-decoration: none;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Конец модальки, начало футера*/
 .footer-wrapper {
     background-color: #323232;
     
@@ -280,23 +360,42 @@ background-image: url(../img/icons/magazine_truck.png);
     padding: 37px 0; 
     
 }
+.designer-link:first-letter {
+    
 
- /* из ФШ 
- 
- .NEW_COLLECTION {
-  font-size: 48px;
-  font-family: "Roboto";
-  color: rgb(81, 81, 81);
-  text-transform: uppercase;
-  line-height: 0.667;
-  text-align: center;
-  position: absolute;
-  left: 2.08px;
-  top: 816.938px;
-  width: 384px;
-  height: 34px;
-  z-index: 67;
 }
+.designer-link {
+text-decoration: none;
+color: #46bfa9;
+}
+ /* из ФШ 
+ .SLIDER_CONTENT {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1600px;
+  height: 1455px;
+  z-index: 75;
+}
+.AFFORDABLE_PARIS_TOURS_CITY_TOURS___TOUR_TICKET {
+  font-size: 60px;
+  font-family: "Roboto";
+  color: rgb(255, 114, 0);
+  text-transform: uppercase;
+  line-height: 1.367;
+  text-align: left;
+  position: absolute;
+  left: 429.006px;
+  top: 383.672px;
+  width: 738px;
+  height: 98px;
+  z-index: 74;
+}
+
+
+
+
+
 
  
  */
