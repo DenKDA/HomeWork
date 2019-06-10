@@ -112,14 +112,12 @@ img {
     padding-right: 15px;
     padding-top: 12px;
 }
-.products-item:nth-child(n + 5) {
-    padding-bottom: 105px;
-}
+
 .products-item:nth-child(-n + 4) {
     margin-bottom: 30px;
 }
 .products-list {
-    
+    padding-bottom: 105px;
     height: auto;
     overflow: hidden;
     
@@ -167,10 +165,10 @@ img {
     margin: 0 auto;
     margin-top: 20px;
 }
-.article-list {
+/*.article-list {
     height: auto;
     overflow: hidden;
-}
+}*/
 .article-item {
     float: left;
     list-style: none;
@@ -179,8 +177,6 @@ img {
     width: 350px;
 }
 .article-title {
-    
-    /*width: 350px;*/
     color: #555252;
     margin-bottom: 30px;
 }
